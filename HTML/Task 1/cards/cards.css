@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.navbar{
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    gap: 175px;
+    align-items: center;
+    
+}
+
+.nav{
+
+    display: flex;
+    gap: 25px;
+}
+
+.nav a{
+    text-decoration: none;
+    color: black;
+
+}
+
+.logo{
+    color: black;
+
+}
+
+.cards{
+    display: flex;
+    padding: 40px;
+    justify-content: space-between;
+}
+
+.child-cards{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+   font-family:
+}
+
+
+.child-cards img{
+
+    width: 120px;
+
+}
+
+.search input{
+    width: 300px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgba(230, 230, 230, 0.472);
+    border: solid 1px rgb(196, 196, 196);
+    padding: 20px;
+    font-size: 15px;
+}
+
+
+.delivery{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.bigbox{
+  background-image: url("https://picsum.photos/1200/800");
+  background-size: cover;
+  border: 8px solid gold;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  width: 1300px;
+  height: 300px;
+  color: white;
+  text-align: left;
+}
+
+.parentbox{
+    padding: 20px;
+    display: flex;
+    justify-content:center;
+}
+
+
+.dress{
+    display: flex;
+    padding: 40px;
+    justify-content: space-between;
+}
+
+.dress-box{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+   font-family:
+}
+
+.bo{
+    border: dotted; width: 200px;
+    color: black;
+    justify-content: center;
+}
+
+

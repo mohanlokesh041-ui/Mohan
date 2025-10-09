@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <center>
+        <h1>Enter The Kabaddi World</h1>
+        <img src="Image/1.jpg" alt="Kabaddi Image">
+        </center>
+        <p>Read The Instractions And Fill The Form</p>
+        <ul>
+            <li>Must for dicipline</li>
+            <li>Daily come to Ground</li>
+            <li>Regular warm of and running</li>
+            <li>Regularly come to practice</li>
+            <li>Rider or Defence</li>
+            <li>In position or Cover position</li>
+        </ul>
+        
+        <center>
+            <form action="kabaddiclub.html" method="get">
+            <label>Enter the name: </label>
+            <input type="text" placeholder="enter Captalize" >
+            <br></br>
+            <label>Enter the Email: </label>
+            <input type="email" placeholder="example123@gamil,com">
+            <br></br>
+            <label>Enter the Mobile :</label>
+            <input type="tel" placeholder="must 10 digit" maxlength="10" minlength="10">
+            <br></br>
+            <label>Enter the Address :</label>
+            <textarea required></textarea>
+            <br></br>
+            <label>DoB</label>
+            <input type="datetime-local">
+
+            <br></br>
+            <label>Enter the position :</label>
+            <select>
+                <option value="" selected disabled>Choose the one skills</option>
+                <option value="corner">Corner</option>
+                <option value="cover">Cover</option>
+                <option value="rider">Rider</option>
+                <option value="center">Center</option>
+                <option value="all rounder">All rounder</option>
+            </select>
+            
+            
+            <br></br>
+            <label>Enter the gender :</label>
+            <input type="radio" name="gender" >Male 
+            <input type="radio" name="gender" >Female 
+            <br></br>
+            <label>Enter the skills :</label>
+            <input type="checkbox" name="skills" >Jump
+            <input type="checkbox" name="skills" >Dubki
+            <input type="checkbox" name="skills" >Roatating
+            <input type="checkbox" name="skills" >Hankle Holder
+            <input type="checkbox" name="skills"> Back hip
+
+            <br></br>
+            <label for="Enter the favorite car"></label>
+            <input type="color" />
+
+            <br></br>
+            <label>Upload Image :</label>
+            <input type="file" />
+
+            <br></br>
+            <label>Upload Your Resume :</label>
+            <input type="file" />
+
+            <br></br>
+            <label>Range :</label>
+            <input type="range" />
+            <br></br>
+            <input type="submit" value="Register">
+            <input type="reset" value="Reset">
+
+            </form>
+        </center>
+</body>
+</html>

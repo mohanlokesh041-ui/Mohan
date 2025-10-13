@@ -1,0 +1,14 @@
+.btn{
+    color: white;
+    border: none;
+    padding: 5px;
+    font-size: 18px;
+    border-radius: 10px;
+    transition: all 1s ease-out;
+}
+
+.b{
+    background-color: blue;
+    color: white;
+    transform: skew(45);
+}

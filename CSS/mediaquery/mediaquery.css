@@ -1,0 +1,45 @@
+body{
+    background-color: black;
+}
+
+.box{
+    background-color: blue;
+    color: white;
+    padding: 20px;
+    width: 200px;
+    height: 200px;
+}
+
+
+.parent{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+@media (max-width:1600px) {
+
+   .box{
+    background-color:orange;
+   }
+    
+}
+
+
+@media (max-width:600px) {
+
+   .box{
+    background-color: aquamarine;
+   }
+    
+}
+
+
+@media (max-width:480px) {
+
+   .box{
+    background-color:black;
+    display: none;
+   }
+    
+}

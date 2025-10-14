@@ -7,8 +7,10 @@
     transition: all 1s ease-out;
 }
 
-.b{
+.b:hover{
     background-color: blue;
     color: white;
     transform: skew(45);
+    border
+
 }

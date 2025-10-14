@@ -21,24 +21,96 @@ body{
 
    .box{
     background-color:orange;
+    display: block;
    }
     
 }
 
+@media (max-width:1200px) {
+
+   .box{
+    background-color:orange;
+    display: none;
+   }
+    
+}
+
+@media (max-width:1025px) {
+
+   .box{
+    background-color:orange;
+    display: none;
+   }
+    
+}
+
+@media (max-width:1024px) {
+
+   .box{
+    background-color:orange;
+    display: block;
+   }
+    
+}
+
+@media (max-width:769px) {
+
+   .box{
+    background-color:orange;
+    display: block;
+   }
+    
+}
+
+@media (max-width:768px) {
+
+   .box{
+    background-color:orange;
+    display: none;
+   }
+    
+}
+
+@media (max-width:601px) {
+
+   .box{
+    background-color:orange;
+    display: none;
+   }
+    
+}
 
 @media (max-width:600px) {
 
    .box{
     background-color: aquamarine;
+    display: block;
    }
     
 }
 
+@media (max-width:481px) {
+
+   .box{
+    background-color:orange;
+    display: block;
+   }
+    
+}
 
 @media (max-width:480px) {
 
    .box{
     background-color:black;
+    display: none;
+   }
+    
+}
+
+@media (max-width:0px) {
+
+   .box{
+    background-color:orange;
     display: none;
    }
     

@@ -16,7 +16,7 @@ for (let a = 10; a == 10; a++) {
    console.log(a);
 }
 for (let i = 1, j = 30; j > i; i++) {
-   console.log("dkjhkhidfu");
+   console.log("loop");
 
 
 }

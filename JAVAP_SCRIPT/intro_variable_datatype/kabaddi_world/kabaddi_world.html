@@ -1,193 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cards</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kabaddi World</title>
 
-    <link rel="stylesheet" href="kabaddi.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
+    body {
+      background: #f2f2f2;
+      color: #333;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      background: #111;
+      color: white;
+      flex-wrap: wrap;
+    }
+
+    .navbar .logo img {
+      width: 160px;
+      border-radius: 10px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .nav div {
+      text-align: center;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .nav a:hover {
+      color: #f5c518;
+    }
+
+    /* Welcome section */
+    .wel h1 {
+      margin-top: 30px;
+      font-size: 2.2em;
+      color: #222;
+    }
+
+    nav img {
+      border-radius: 20px;
+      margin: 20px 0;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      width: 90%;
+      max-width: 900px;
+    }
+
+    /* Player Cards */
+    .one, .two, .three, .four {
+      background: white;
+      width: 90%;
+      max-width: 700px;
+      margin: 20px auto;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      transition: 0.3s;
+    }
+
+    .one:hover, .two:hover, .three:hover, .four:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .one img, .two img, .three img, .four img {
+      width: 100%;
+      border-radius: 15px;
+    }
+
+    .one h1, .two h2, .three h2, .four h2 {
+      margin-bottom: 10px;
+      color: #111;
+    }
+
+    .one p, .two p, .three p, .four p {
+      text-align: justify;
+      line-height: 1.5;
+      margin: 10px 0;
+    }
+
+    .one a, .two a, .three a, .four a {
+      display: inline-block;
+      background: #111;
+      color: white;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .one a:hover, .two a:hover, .three a:hover, .four a:hover {
+      background: #f5c518;
+      color: #111;
+    }
+
+    /* Form */
+    form {
+      background: white;
+      width: 90%;
+      max-width: 700px;
+      margin: 30px auto;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      text-align: left;
+    }
+
+    form label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    form input, form textarea, form select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      font-size: 15px;
+      outline: none;
+      transition: 0.2s;
+    }
+
+    form input:focus, form textarea:focus, form select:focus {
+      border-color: #f5c518;
+      box-shadow: 0 0 5px rgba(245, 197, 24, 0.4);
+    }
+
+    form input[type="radio"], form input[type="checkbox"], form input[type="color"], form input[type="range"] {
+      width: auto;
+      margin-right: 10px;
+    }
+
+    form input[type="submit"], form input[type="reset"] {
+      width: 48%;
+      background: #111;
+      color: white;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      padding: 12px;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    form input[type="submit"]:hover, form input[type="reset"]:hover {
+      background: #f5c518;
+      color: #111;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 30px;
+      font-size: 14px;
+      border-top: 2px solid #f5c518;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav img {
+        width: 95%;
+      }
+
+      form input[type="submit"], form input[type="reset"] {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <header class="navbar">
-        <div class="logo">
-           <p>
-            <img src="img/3.jpg" width="185px" alt="">
-           </p>
-        </div>
-        
-        
-        <div class="nav">
-         <div style="display: flex; flex-direction: column; gap: 5px">
-            <img src="" width="30px" alt="">
-           <a href="">Home</a>
-           </div>
-
-           <div style="display: flex; flex-direction: column; gap: 5px">
-            <img src="" width="26px" alt="">
-           <a href="">Log In</a>
-           </div>
-           <div style="display: flex; flex-direction: column; gap: 5px">
-            <img src="" width="26px" alt="">
-           <a href="">Contact   </a>
-           </div>
-
-           <div style="display: flex; flex-direction: column; gap: 5px">
-            <img src="img/wishlist.png" width="26px" alt="">
-           <a href="">About</a>
-           </div>
-           
-
-        </div>
-    </header>
-
-     <br></br>
-
-
-     <center>
-    <div>
-        <div class="wel">
-            <h1>Welcome To Kabaddi World</h1>
-        </div>
+  <header class="navbar">
+    <div class="logo">
+      <img src="img/3.jpg" alt="Kabaddi Logo" />
     </div>
 
-    <br></br>
+    <div class="nav">
+      <div><a href="#">Home</a></div>
+      <div><a href="#">Log In</a></div>
+      <div><a href="#">Contact</a></div>
+      <div><a href="#">About</a></div>
+    </div>
+  </header>
+
+  <center>
+    <div class="wel">
+      <h1>Welcome To Kabaddi World</h1>
+    </div>
+
     <nav>
-       
-        <div>
-            <img src="img/1.1.jpg" width="80%" alt="banner for decathlon">
-        </div>
-        
+      <img src="img/1.1.jpg" alt="Kabaddi Banner" />
     </nav>
-</center>
+  </center>
 
+  <!-- Player Cards -->
+  <div class="one">
+    <h1>Pardeep Narwal</h1>
+    <img src="img/one.jpg" alt="Pardeep Narwal">
+    <p>Pardeep Narwal is an Indian former international kabaddi player, widely regarded as the greatest raider in kabaddi history. He led the Patna Pirates to three straight titles in Pro Kabaddi League.</p>
+    <a href="#">Read More</a>
+  </div>
 
-<center>
-    <div class="one">
-    <h1>pardeep Narwal</h1>
-    <img src="img/one.jpg" width="500" alt="kabaddi">
-    <p>
-        Pardeep Narwal is an Indian former international kabaddi player,
-         who plays as a raider. Widely regarded as the greatest raider in kabaddi history, 
-         he led the Patna Pirates to three straight titles in Pro Kabaddi League and holds a 
-         multitude of the league's raiding records.
-    </p>
-    <a href="">read more</a>
-    </div>
+  <div class="two">
+    <h2>Ajay Thakur</h2>
+    <img src="img/ajay.jpg" alt="Ajay Thakur">
+    <p>Ajay Thakur is a professional kabaddi player known for his calm leadership and finishing skills, often called the "Captain Cool" of kabaddi.</p>
+    <a href="#">Read More</a>
+  </div>
 
-    <br></br>
+  <div class="three">
+    <h2>Naveen Kumar</h2>
+    <img src="img/naveen-kumar.avif" alt="Naveen Kumar">
+    <p>Naveen Kumar, known as "The Naveen Express", is one of the youngest and fastest raiders in Pro Kabaddi history, playing for Dabang Delhi.</p>
+    <a href="#">Read More</a>
+  </div>
 
+  <div class="four">
+    <h2>Aslam Inamdar</h2>
+    <img src="img/aslam_1.jpg" alt="Aslam Inamdar">
+    <p>Aslam Inamdar is a talented all-rounder who began his kabaddi career in Maharashtra and plays for Puneri Paltan in the Pro Kabaddi League.</p>
+    <a href="#">Read More</a>
+  </div>
 
-    <div class="two">
-        <h2>Ajay Thakur</h2>
-        <img src="img/ajay.jpg" width="500" alt="captain cool">
-        <p>Dhoni was born on 7 July 1981 in Ranchi, Bihar (now in Jharkhand) in a Hindu Rajput 
-            family to Pan Singh and Devaki Devi.[2][3] His parents hailed from Lwali village in 
-            Uttar Pradesh (now Uttarakhand) and he was the youngest of three children.[4][5][6] His 
-            family spells the surname as "Dhauni".[7] The spelling "Dhoni" emerged due to a spelling 
-            mistake in his school certificates and, despite repeated attempts by his family, has never been rectified.
-        </p>
-        <a href="">read more</a>
+  <!-- Registration Form -->
+  <form action="kabaddiclub.html" method="get">
+    <label>Full Name:</label>
+    <input type="text" placeholder="Enter your name" required>
 
-    </div>
+    <label>Email:</label>
+    <input type="email" placeholder="example@gmail.com" required>
 
-<br></br>
+    <label>Mobile Number:</label>
+    <input type="tel" placeholder="10-digit number" maxlength="10" minlength="10" required>
 
-    <div class="three">
-        <h2>Naveen Kumar</h2>
-        <img src="img/naveen-kumar.avif" width="500" alt="king">
-        <p>Virat Kohli is an Indian international cricketer and the former captain of the Indian national cricket team. 
-            He is a right-handed batsman and an occasional medium-pace bowler. He currently represents 
-            Royal Challengers Bengaluru in the IPL and Delhi in domestic cricket.
-        </p>
-        <a href="">read more</a>
-    </div>
+    <label>Address:</label>
+    <textarea placeholder="Enter your address" required></textarea>
 
-<br></br>
+    <label>Date of Birth:</label>
+    <input type="date" required>
 
-    <div class="four">
-        <h2>aslam inamdar</h2>
-        <img src="img/four.jpg" alt="speed machine">
-        <p>Aslam is an Indian professional Kabaddi player who plays in the Pro Kabaddi League. 
-            He began his career playing in the sub-junior nationals in Maharashtra, then joined
-             Puneri Paltan as a raider for the 2021 PKL season.
-            </p>
-            <a href="">read more</a>
-    </div>
+    <label>Position:</label>
+    <select required>
+      <option value="" disabled selected>Select your position</option>
+      <option value="corner">Corner</option>
+      <option value="cover">Cover</option>
+      <option value="raider">Raider</option>
+      <option value="center">Center</option>
+      <option value="allrounder">All Rounder</option>
+    </select>
 
-    
-    <br></br>
+    <label>Gender:</label>
+    <input type="radio" name="gender" required> Male
+    <input type="radio" name="gender"> Female
 
-    <form action="kabaddiclub.html" method="get">
-            <label>Enter the name: </label>
-            <input type="text" placeholder="enter Captalize" >
-            <br></br>
-            <label>Enter the Email: </label>
-            <input type="email" placeholder="example123@gamil,com">
-            <br></br>
-            <label>Enter the Mobile :</label>
-            <input type="tel" placeholder="must 10 digit" maxlength="10" minlength="10">
-            <br></br>
-            <label>Enter the Address :</label>
-            <textarea required></textarea>
-            <br></br>
-            <label>DoB</label>
-            <input type="datetime-local">
+    <br><br>
+    <label>Skills:</label>
+    <input type="checkbox"> Jump
+    <input type="checkbox"> Dubki
+    <input type="checkbox"> Rotating
+    <input type="checkbox"> Hankle Holder
+    <input type="checkbox"> Back Hip
 
-            <br></br>
-            <label>Enter the position :</label>
-            <select>
-                <option value="" selected disabled>Choose the one skills</option>
-                <option value="corner">Corner</option>
-                <option value="cover">Cover</option>
-                <option value="rider">Rider</option>
-                <option value="center">Center</option>
-                <option value="all rounder">All rounder</option>
-            </select>
-            
-            
-            <br></br>
-            
-            <label>Enter the gender :</label>
-            <input type="radio" name="gender" >Male 
-            <input type="radio" name="gender" >Female 
-            <br></br>
-            <label>Enter the skills :</label>
-            <input type="checkbox" name="skills" >Jump
-            <input type="checkbox" name="skills" >Dubki
-            <input type="checkbox" name="skills" >Roatating
-            <input type="checkbox" name="skills" >Hankle Holder
-            <input type="checkbox" name="skills"> Back hip
+    <br><br>
+    <label>Favorite Color:</label>
+    <input type="color">
 
-            <br></br>
-            <label for="Enter the favorite car"></label>
-            <input type="color" />
+    <label>Upload Image:</label>
+    <input type="file" accept="image/*">
 
-            <br></br>
-            <label>Upload Image :</label>
-            <input type="file" />
+    <label>Upload Resume:</label>
+    <input type="file" accept=".pdf,.doc,.docx">
 
-            <br></br>
-            <label>Upload Your Resume :</label>
-            <input type="file" />
+    <label>Experience Level:</label>
+    <input type="range" min="0" max="10">
 
-            <br></br>
-            <label>Range :</label>
-            <input type="range" />
-            <br></br>
-            <input type="submit" value="Register">
-            <input type="reset" value="Reset">
+    <input type="submit" value="Register">
+    <input type="reset" value="Reset">
+  </form>
 
-            </form>
-
-             
-
-             <br></br>
-
-             <footer>
-                cc2025@ All Rights Reserved
-             </footer>
-
-             </center>
+  <footer>
+    © 2025 All Rights Reserved | Kabaddi World
+  </footer>
 </body>
 </html>

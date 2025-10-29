@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanchi tea stall</title>
+</head>
+<body>
+
+    <div id="home" class="hp" style="background-color: black;color: white;padding: 20px;">
+    <h1 id="text" style="text-align: center;color: aqua;">Welcome To Murugan Tea Stall !!</h1>
+    </div>
+    <img src="assessts/banner.png" alt="main bnner" height="500px" width="100%" style="margin-top: 20px;">
+
+    <div id="myproducts" style="text-align: center;">
+        <button style="background-color: red;color:black;margin-top: 20px;width: 150px;height: 30px;"><b>Available Products</b></button>
+    </div>
+
+    <div id="sourceimg" style="margin-top: 30px; text-align: center;display: none;">
+        <img src="assessts/tea_coffe.png" alt="" height="400px" width="80%">
+    </div>
+
+ 
+    
+    <div id="avlproducts" style="text-align: center;display: none;">
+    <button id="teabtn" style="background-color: chocolate;color: black; margin-top: 20px;"><b>Tea</b></button>
+    <button id="lemonbtn" style="background-color: yellow;color: brown;margin-top: 20px;"><b>Lemon Tea</b></button>
+    <button id="coffeebtn" style="background-color: rgba(115, 74, 3, 0.815);margin-top: 20px;"><b>Coffee</b></button>
+    <button id="horlicksbtn" style="background-color: antiquewhite;color: black;margin-top: 20px;"><b>Horlicks</b></button>
+    </div>
+
+
+    <div id="paymentbtn" style="display: none;text-align: center;">
+        <button id="cashbtn" style=" background-color: aqua;color: black;margin-top: 20px;"><b>Pay Now</b></button>
+    </div>
+
+    <p id="message" style="display: none;text-align: center;"> <b>Thank you for Your Order!! Your Order is Being Prepared</b></p>
+    
+
+    <script>
+
+        let Products = document.getElementById("avlproducts")
+        let Available = document.getElementById("myproducts")
+        let pay = document.getElementById("paymentbtn")
+        let confirmmsg = document.getElementById("message")
+        let avlimage = document.getElementById("sourceimg")
+
+          Available.addEventListener("click",()=>{
+            if(avlimage.style.display === "none"){
+                avlimage.style.display ="block"
+            }
+
+
+        })
+
+        Available.addEventListener("click",()=>{
+            if(Products.style.display === "none"){
+                Products.style.display = "block"
+            }
+        })
+
+      
+
+        Products.addEventListener("click", ()=>{
+            if(pay.style.display === "none"){
+                pay.style.display = "block"
+            }
+        })
+
+        pay.addEventListener("click",()=>{
+            if(confirmmsg.style.display === "none"){
+                confirmmsg.style.display = "block"
+            }
+
+            
+        })
+
+
+
+
+        
+        
+
+    </script>
+ 
+
+</body>
+</html>

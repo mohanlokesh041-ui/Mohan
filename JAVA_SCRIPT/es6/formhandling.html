@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Es6 Features</title>
+</head>
+<body>
+    
+
+
+
+
+    <h1>Form Handling</h1>
+       
+      <div>
+    <input type="text" id="actors1">
+    <button id="btn1">Click</button>
+    <p id="par"></p>
+    <img src="" id="image" alt="">
+    </div>
+
+
+    <script>
+
+        //form handling practice
+
+
+        const Button = document.getElementById("btn1")
+
+        Button.addEventListener("click",(e)=>{
+            const actors1 = document.getElementById("actors1").value
+            const images = document.getElementById("image")
+            const paractors1 = document.getElementById("par")
+            paractors1.textContent = `your actor :${actors1}`
+
+            if(actors1==="ajith"){
+         images.src = "img/ajith.jpg"
+
+      }else if (actors1==="vijay") {
+        images.src = "img/vijay.jpg"
+
+      } else if (actors1==="surya") {
+        images.src = "img/surya.jpg" 
+
+      }else if (actors1==="kamal") {
+         images.src = "img/kamal.jpg"
+
+      }else if (actors1==="vikram") {
+         images.src = "img/vikarm.jpg"
+
+      }else if (actors1==="sk") {
+         images.src = "img/sk.jpg"
+
+      }else if (actors1==="karthi") {
+         images.src = "img/karthi.jpg"
+
+      }else if (actors1==="dhanush") {
+        images.src = "img/dhanush.jpg"
+
+      }
+      else if (actors1==="vishal") {
+        images.src = "img/vishal.jpg"
+
+      }
+      else if (actors1==="rajini") {
+        images.src = "img/rajini.jpg"
+
+      }
+
+      
+      
+      else {
+         paractors1.textContent = `Your actors : ${actors1} is not found`
+         images.src = "" 
+      }
+            
+
+        })
+    </script>
+</body>
+</html>

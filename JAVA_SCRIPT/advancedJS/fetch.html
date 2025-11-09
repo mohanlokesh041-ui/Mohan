@@ -1,0 +1,25 @@
+<script>
+
+    const getdata = async()=>{
+
+        try{
+            console.log(`fetching datas`);
+
+            const res = await fetch("https://dummyjson.com/carts")
+            const data = await res.json()
+            console.log(data.carts);
+            
+        }catch(err){
+            console.error(`something error`,err);
+            
+
+        }finally{
+            console.log(`process completed`);
+            
+        }
+
+
+    }
+
+    getdata()
+</script>
